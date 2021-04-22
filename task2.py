@@ -3,12 +3,4 @@
 
 
 def is_triangle(a, b, c):
-    if a and b and c != 0:
-        return True
-    if a or b or c > 0:
-        return True
-    else:
-        return False
-
-
-print(is_triangle(2, 5, 1))
+    pass

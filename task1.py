@@ -13,4 +13,5 @@ Don't forget to convert the percent parameter as a percentage in the body of you
 
 
 def nb_year(p0, percent, aug, p):
+
     pass

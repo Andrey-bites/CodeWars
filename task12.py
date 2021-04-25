@@ -2,21 +2,27 @@
 Examples
 "the-stealth-warrior" gets converted to "theStealthWarrior"
 "The_Stealth_Warrior" gets converted to "TheStealthWarrior" """
-S.capitalize()
-
-# def to_camel_case(text):
-#     for elem in text:
-#         if elem == '-':
-#             lst1 = text.split('-')
-#             new_text = ''.join(lst1)
-
-#     for elem in text:
-#         if elem == '_':
-#             lst2 = text.split('_')
-#             for i in lst2:
-#                 i.title()
-
-#     print(new_text)
 
 
-# print(to_camel_case('the-stealth-warrior'))
+def to_camel_case(text):
+    for i in text:
+        if i == '-':
+            text = text.replace(i, ' ')
+        else:
+            if i == '_':
+                text = text.replace(i, ' ')
+
+    if text[0] == text[0].upper():
+        text = text.title()
+    else:
+        if text[0] == text[0].lower():
+            leter = text[0]
+            text = text.title()
+            text = text.replace(text[0], leter)
+
+    text = text.replace(' ', '')
+
+    return text
+
+
+print(to_camel_case('the-stealth-warrior'))

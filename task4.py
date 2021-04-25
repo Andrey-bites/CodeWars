@@ -10,4 +10,4 @@ def is_square(n):
     return n > -1 and math.sqrt(n) % 1 == 0
 
 
-is_square(2)
+print(is_square(26))

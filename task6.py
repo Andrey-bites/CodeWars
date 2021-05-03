@@ -9,7 +9,6 @@ Examples:
 
 def digital_root(n):
     n = str(n)
-    print(type(n))
     while len(n) > 1:
         lst = [int(i) for i in n]
         n = sum(lst)

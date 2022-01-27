@@ -5,5 +5,7 @@ is_isogram("moOse" ) == false # -- ignore letter case """
 
 
 def is_isogram(string):
-    # your code here
     pass
+
+
+print(is_isogram("Dermatoglyphics"))

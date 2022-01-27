@@ -14,8 +14,9 @@ Note: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '
 
 
 def namelist(names):
-    # your code here
-    pass
-
+    lst_name = []
+    for name in names:
+        lst_name.append(name.values())
+    print(lst_name)
 
 namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}])

@@ -13,5 +13,10 @@ Don't forget to convert the percent parameter as a percentage in the body of you
 
 
 def nb_year(p0, percent, aug, p):
+    percent = percent / 100
+    res = (p - p0) // ((p0 * percent) + aug)
 
-    pass
+    print(res)
+
+
+nb_year(1000, 2, 50, 1200)

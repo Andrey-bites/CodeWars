@@ -6,10 +6,25 @@ divisors(13); #should return "13 is prime" """
 
 
 def divisors(integer):
-    if integer <= 1:
-        raise Exception()
 
-    pass
+    result = []
+
+    for i in range(integer + 1):
+        if i > 0 and i != 1 and i != integer:
+            if integer % i == 0:
+                result.append(i)
+
+    if len(result) == 0:
+        result.append(integer)
+
+    if result[0] == integer:
+        return f'{result[0]} is prime'
+
+    return result
 
 
-divisors(1)
+print(divisors(1))
+print(divisors(12))
+print(divisors(25))
+print(divisors(13))
+print(divisors(36))

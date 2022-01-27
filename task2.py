@@ -3,4 +3,8 @@
 
 
 def is_triangle(a, b, c):
-    pass
+    if a or b or c <= 0:
+        return False
+    else:
+        return True
+

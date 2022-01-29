@@ -14,9 +14,17 @@ Note: all the hashes are pre-validated and will only contain A-Z, a-z, '-' and '
 
 
 def namelist(names):
-    lst_name = []
-    for name in names:
-        lst_name.append(name.values())
-    print(lst_name)
+    lst = []
+    for i in names:
+        if isinstance(i, dict):
+            lst.append(i.get('name'))
+    if len(lst) >= 2:
+        lst.extend('&')
+        lst[-1], lst[-2] = lst[-2], lst[-1]
+    final_str = ' '.join(lst)
+            
+    return final_str
 
-namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}])
+print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]))
+print(namelist([ {'name': 'Bart'} ]))
+print(namelist([ {'name': 'Bart'}, {'name': 'Lisa'} ]))

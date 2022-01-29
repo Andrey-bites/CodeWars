@@ -17,7 +17,7 @@ def domain_name(url):
         else:
             tpl = r'[\w\W\d]+\.'
         findall_str = re.findall(tpl, url)
-    
+
     for i in findall_str[0]:
         if i != '/':
             list.append(i)

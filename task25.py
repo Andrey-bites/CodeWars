@@ -8,11 +8,10 @@ If a string contains all repeating characters, it should return an empty string 
 
 ''' First non-repeating character '''
 
+
 def first_non_repeating_letter(string):
 
-    for elem in string:
     pass
-
 
 
 print(first_non_repeating_letter('a'))

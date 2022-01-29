@@ -15,7 +15,7 @@ Examples
 
 def generate_hashtag(s):
     new_lst = []
-    
+
     if len(s) <= 1:
         return False
 
